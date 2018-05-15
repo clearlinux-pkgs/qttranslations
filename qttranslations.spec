@@ -4,7 +4,7 @@
 #
 Name     : qttranslations
 Version  : 5.10.1
-Release  : 4
+Release  : 5
 URL      : http://download.qt.io/official_releases/qt/5.10/5.10.1/submodules/qttranslations-everywhere-src-5.10.1.tar.xz
 Source0  : http://download.qt.io/official_releases/qt/5.10/5.10.1/submodules/qttranslations-everywhere-src-5.10.1.tar.xz
 Summary  : No detailed summary available
@@ -12,7 +12,8 @@ Group    : Development/Tools
 License  : GPL-3.0
 Requires: qttranslations-data
 BuildRequires : qtbase-dev
-BuildRequires : qttools-bin
+BuildRequires : qtbase-extras
+BuildRequires : qttools-extras
 
 %description
 All translations are contributed by the Qt community.
