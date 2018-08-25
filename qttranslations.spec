@@ -4,7 +4,7 @@
 #
 Name     : qttranslations
 Version  : 5.11.1
-Release  : 7
+Release  : 8
 URL      : http://download.qt.io/official_releases/qt/5.11/5.11.1/submodules/qttranslations-everywhere-src-5.11.1.tar.xz
 Source0  : http://download.qt.io/official_releases/qt/5.11/5.11.1/submodules/qttranslations-everywhere-src-5.11.1.tar.xz
 Summary  : No detailed summary available
@@ -12,9 +12,8 @@ Group    : Development/Tools
 License  : GPL-3.0
 Requires: qttranslations-license
 Requires: qttranslations-data
-BuildRequires : qtbase-dev
-BuildRequires : qtbase-extras
-BuildRequires : qttools-extras
+BuildRequires : buildreq-kde
+BuildRequires : buildreq-qmake
 
 %description
 All translations are contributed by the Qt community.
@@ -50,7 +49,7 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1530983087
+export SOURCE_DATE_EPOCH=1535207450
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/qttranslations
 cp LICENSE.GPL3-EXCEPT %{buildroot}/usr/share/doc/qttranslations/LICENSE.GPL3-EXCEPT
