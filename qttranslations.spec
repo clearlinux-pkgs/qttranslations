@@ -4,7 +4,7 @@
 #
 Name     : qttranslations
 Version  : 5.12.2
-Release  : 14
+Release  : 15
 URL      : https://download.qt.io/official_releases/qt/5.12/5.12.2/submodules/qttranslations-everywhere-src-5.12.2.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/5.12/5.12.2/submodules/qttranslations-everywhere-src-5.12.2.tar.xz
 Summary  : No detailed summary available
@@ -12,8 +12,8 @@ Group    : Development/Tools
 License  : GPL-3.0
 Requires: qttranslations-data = %{version}-%{release}
 Requires: qttranslations-license = %{version}-%{release}
-BuildRequires : buildreq-kde
 BuildRequires : buildreq-qmake
+BuildRequires : qttools-dev
 
 %description
 All translations are contributed by the Qt community.
@@ -49,7 +49,7 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1552689387
+export SOURCE_DATE_EPOCH=1552713051
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qttranslations
 cp LICENSE.GPL3-EXCEPT %{buildroot}/usr/share/package-licenses/qttranslations/LICENSE.GPL3-EXCEPT
