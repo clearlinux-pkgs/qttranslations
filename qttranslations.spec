@@ -4,7 +4,7 @@
 #
 Name     : qttranslations
 Version  : 5.15.2
-Release  : 29
+Release  : 30
 URL      : https://download.qt.io/official_releases/qt/5.15/5.15.2/submodules/qttranslations-everywhere-src-5.15.2.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/5.15/5.15.2/submodules/qttranslations-everywhere-src-5.15.2.tar.xz
 Summary  : No detailed summary available
@@ -53,10 +53,10 @@ test -r config.log && cat config.log
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1655665732
+export SOURCE_DATE_EPOCH=1662657946
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qttranslations
-cp %{_builddir}/qttranslations-everywhere-src-5.15.2/LICENSE.GPL3-EXCEPT %{buildroot}/usr/share/package-licenses/qttranslations/e93757aefa405f2c9a8a55e780ae9c39542dfc3a
+cp %{_builddir}/qttranslations-everywhere-src-%{version}/LICENSE.GPL3-EXCEPT %{buildroot}/usr/share/package-licenses/qttranslations/e93757aefa405f2c9a8a55e780ae9c39542dfc3a || :
 %make_install
 
 %files
